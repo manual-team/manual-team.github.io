@@ -1,11 +1,21 @@
 {
-    "version": 1,
-    "redirects": [
-      {
-        "source": "/.well-known/apple-app-site-association",
-        "target": "/well-known/apple-app-site-association",
-        "status": "200",
-        "condition": null
+  "redirects": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "target": "/well-known/apple-app-site-association",
+      "status": "200",
+      "condition": null
+    }
+  ],
+  "features": {
+    "frontend": {
+      "framework": "none",
+      "config": {
+        "SourceDir": ".",
+        "DistributionDir": ".",
+        "BuildCommand": "",
+        "StartCommand": ""
       }
-    ]
+    }
   }
+}
