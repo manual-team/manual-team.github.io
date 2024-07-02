@@ -13,9 +13,5 @@
         "kind": "Static"
       }
     }
-  ],
-  "framework": {
-    "name": "static",
-    "version": "1.0"
-  }
+  ]
 }
