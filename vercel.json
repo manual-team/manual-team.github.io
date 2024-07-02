@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "share.whyapp.co",
+            "destination": "whyapp.co",
+            "permanent": false
+        }
+    ]
+}
