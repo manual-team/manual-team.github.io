@@ -1,9 +1,14 @@
 {
-    "redirects": [
-        {
-            "source": "share.whyapp.co",
-            "destination": "whyapp.co",
-            "permanent": false
-        }
+    "rewrites": [
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "share.whyapp.co"
+          }
+        ],
+        "destination": "/:path*"
+      }
     ]
-}
+  }
