@@ -2,16 +2,10 @@
   "version": 1,
   "routes": [
     {
-      "path": "/.well-known/apple-app-site-association",
-      "target": {
-        "kind": "Static"
-      }
-    },
-    {
-      "path": "/*",
-      "target": {
-        "kind": "Static"
-      }
+        "source": "/.well-known/apple-app-site-association",
+        "target": "/.well-known/apple-app-site-association.json",
+        "status": "200",
+        "condition": null
     }
-  ]
+]
 }
