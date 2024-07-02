@@ -1,12 +1,23 @@
 {
   "version": 1,
-
   "routes": [
     {
-      "source": "/.well-known/apple-app-site-association",
-      "target": "/well-known/apple-app-site-association",
-      "status": "200",
-      "condition": null
+      "path": "/.well-known/apple-app-site-association",
+      "target": {
+        "kind": "Static",
+        "src": "/well-known/apple-app-site-association"
+      }
+    },
+    {
+      "path": "/*",
+      "target": {
+        "kind": "Static",
+        "src": "/index.html"
+      }
     }
-  ]
+  ],
+  "framework": {
+    "name": "static",
+    "version": "1.0"
+  }
 }
