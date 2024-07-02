@@ -1,4 +1,8 @@
 {
+  "version": "1.0",
+  "defaultCacheBehavior": {
+    "viewerProtocolPolicy": "redirect-to-https"
+  },
   "redirects": [
     {
       "source": "/.well-known/apple-app-site-association",
