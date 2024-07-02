@@ -4,15 +4,13 @@
     {
       "path": "/.well-known/apple-app-site-association",
       "target": {
-        "kind": "Static",
-        "src": "/well-known/apple-app-site-association"
+        "kind": "Static"
       }
     },
     {
       "path": "/*",
       "target": {
-        "kind": "Static",
-        "src": "/index.html"
+        "kind": "Static"
       }
     }
   ],
