@@ -1,25 +1,12 @@
 {
-  "version": "1.0",
-  "defaultCacheBehavior": {
-    "viewerProtocolPolicy": "redirect-to-https"
-  },
-  "redirects": [
+  "version": 1,
+
+  "routes": [
     {
       "source": "/.well-known/apple-app-site-association",
       "target": "/well-known/apple-app-site-association",
       "status": "200",
       "condition": null
     }
-  ],
-  "features": {
-    "frontend": {
-      "framework": "none",
-      "config": {
-        "SourceDir": ".",
-        "DistributionDir": ".",
-        "BuildCommand": "",
-        "StartCommand": ""
-      }
-    }
-  }
+  ]
 }
