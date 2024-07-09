@@ -13,6 +13,10 @@
         }
       ],
       "destination": "/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/Modak.ttf"
     }
   ]
 }
