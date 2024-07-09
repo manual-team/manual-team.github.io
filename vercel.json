@@ -1,14 +1,18 @@
 {
-    "rewrites": [
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "share.whyapp.co"
-          }
-        ],
-        "destination": "/:path*"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "share.whyapp.co"
+        }
+      ],
+      "destination": "/:path*"
+    }
+  ]
+}
