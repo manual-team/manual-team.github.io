@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8" />
     <title>Why</title>
-    
+
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="Why?" />
     <meta id="og-description" property="og:description" content="Why?!" />
     <meta property="og:url" content="https://whyapp.co" />
     <meta property="og:type" content="website" />
-    <!-- Updated the image to point to your S3 URL -->
-    <meta property="og:image" content="https://yyy-seo.s3.amazonaws.com/s8u0w2y4-1234-5678-nopq-r01234567890.png" />
-    <!-- Optional: Add image dimensions for better rendering on some platforms -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    
+    <!-- Placeholder for dynamic OG image -->
+    <meta id="og-image" property="og:image" content="" />
+    <meta property="og:image:width" content="780" />
+    <meta property="og:image:height" content="914" />
+
     <!-- Twitter Cards meta tags for Twitter sharing -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Why?" />
     <meta name="twitter:description" content="Why?!" />
-    <!-- Updated the Twitter card image as well -->
-    <meta name="twitter:image" content="https://yyy-seo.s3.amazonaws.com/s8u0w2y4-1234-5678-nopq-r01234567890.png" />
+    <meta id="twitter-image" name="twitter:image" content="" />
+
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the 'id' query parameter from the URL
+        const id = getQueryParam('id');
+
+        if (id) {
+            // Construct the S3 URL using the id
+            const s3ImageUrl = `https://yyy-seo.s3.amazonaws.com/${id}.png`;
+
+            // Update the og:image meta tag with the dynamic URL
+            document.getElementById('og-image').setAttribute('content', s3ImageUrl);
+
+            // Update the twitter:image meta tag with the dynamic URL
+            document.getElementById('twitter-image').setAttribute('content', s3ImageUrl);
+
+            console.log(`OG image URL set to: ${s3ImageUrl}`);
+        } else {
+            console.error('ID query parameter not found in the URL.');
+        }
+    </script>
 
     <style>
         @font-face {
